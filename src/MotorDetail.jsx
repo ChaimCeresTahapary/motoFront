@@ -15,7 +15,7 @@ function ProductDetail() {
                 const data = await response.json();
                 setMotos(data);
             } catch (error) {
-                console.error("Fout bij het ophalen van notities:", error);
+                console.error("Fout bij het ophalen van DataMoto:", error);
             }
         };
 
@@ -26,15 +26,15 @@ function ProductDetail() {
 
     return (
         <div className="bg-white shadow-md rounded-lg p-8 border border-gray-200 max-w-3xl mx-auto mt-10">
-            <h1 className="text-3xl font-bold text-gray-900 mb-6">Product Detail – {id}</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-6">Motor Detail – {id}</h1>
 
             <h2 className="text-2xl font-semibold text-gray-800 mb-2">{motos?.titel ?? "Nog geen titel"}</h2>
 
-            <p className="text-gray-600 mb-4">Brand: {motos?.merk ?? "Nog geen brand"}</p>
+            <p className="text-gray-600 mb-4">Merk: {motos?.merk ?? "Nog geen brand"}</p>
 
-            <p className="text-gray-700 leading-relaxed whitespace-pre-line">License: {motos?.rijbewijs ?? "Nog geen license"}</p>
+            <p className="text-gray-700 leading-relaxed whitespace-pre-line">Rijbewijs: {motos?.rijbewijs ?? "Nog geen rijbewijs"}</p>
 
-            <Link to={`/edit/${id}`} className="hover:text-gray-300 transition">Bewerk dit product</Link>
+            <Link to={`/edit/${id}`} className="hover:text-gray-300 transition">Bewerk deze Motor</Link>
         </div>
     );
 }

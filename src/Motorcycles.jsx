@@ -5,7 +5,7 @@ import Motor from "./Motor.jsx";
 function App() {
     const [motos, setMotos] = useState([]);
     const getMoto = async () => {
-        console.log('haal notities op');
+        console.log('haal motor album  op');
 
         try {
             const response = await fetch("http://145.24.237.20:8000/motoAlbum/", {
@@ -22,7 +22,7 @@ function App() {
         } catch (error) {
 
 
-            console.error('Fout bij het ophalen van notities:', error);
+            console.error('Fout bij het ophalen van motor data:', error);
         }
     }
 

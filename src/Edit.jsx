@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 
-const API_BASE = "http://145.24.237.20:8000/motoAlbum/";
+const API_BASE = "http://145.24.237.20:8000/motoAlbum";
 
 function EditComponent() {
     const navigate = useNavigate();
@@ -62,20 +62,20 @@ function EditComponent() {
             <h1 className="text-3xl font-bold mb-6 text-gray-900">Product Bewerken</h1>
 
             <div className="mb-4">
-                <label htmlFor="title" className="block font-medium text-gray-700 mb-1">Title</label>
-                <input type="text" id="title" name="title" value={formData.titel} onChange={handleInputChange}
+                <label htmlFor="titel" className="block font-medium text-gray-700 mb-1">Titel</label>
+                <input type="text" id="titel" name="titel" value={formData.titel} onChange={handleInputChange}
                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
             </div>
 
             <div className="mb-4">
-                <label htmlFor="brand" className="block font-medium text-gray-700 mb-1">Brand</label>
-                <textarea id="brand" name="brand" value={formData.merk} onChange={handleInputChange}
+                <label htmlFor="merk" className="block font-medium text-gray-700 mb-1">Merk</label>
+                <textarea id="merk" name="merk" value={formData.merk} onChange={handleInputChange}
                           className="w-full border border-gray-300 rounded-md px-3 py-2 h-28 resize-none focus:ring-2 focus:ring-blue-500 focus:outline-none" />
             </div>
 
             <div className="mb-6">
-                <label htmlFor="license" className="block font-medium text-gray-700 mb-1">License</label>
-                <input type="text" id="license" name="license" value={formData.rijbewijs} onChange={handleInputChange}
+                <label htmlFor="rijbewijs" className="block font-medium text-gray-700 mb-1">Rijbewijs</label>
+                <input type="text" id="rijbewijs" name="rijbewijs" value={formData.rijbewijs} onChange={handleInputChange}
                        className="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
             </div>
 
