@@ -34,7 +34,23 @@ function ProductDetail() {
 
             <p className="text-gray-700 leading-relaxed whitespace-pre-line">Rijbewijs: {motos?.rijbewijs ?? "Nog geen rijbewijs"}</p>
 
-            <Link to={`/edit/${id}`} className="hover:text-gray-300 transition">Bewerk deze Motor</Link>
+
+            <div className="flex gap-4 mt-4">
+                <Link
+                    to={`/edit/${id}`}
+                    className="inline-block px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
+                >
+                    Bewerk deze Motor
+                </Link>
+
+
+                <Link
+                    to={`/delete/${id}`}
+                    className="inline-block px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
+                >
+                    Delete
+                </Link>
+            </div>
         </div>
     );
 }

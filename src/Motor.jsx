@@ -14,20 +14,6 @@ function Products ({ moto }) {
                 >
                     Motor detail
                 </Link>
-
-                <Link
-                    to={`/edit/${moto.id}`}
-                    className="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition"
-                >
-                    Edit
-                </Link>
-
-                <Link
-                    to={`/delete/${moto.id}`}
-                    className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
-                >
-                    Delete
-                </Link>
             </div>
         </div>
     );
